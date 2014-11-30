@@ -4,8 +4,10 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+My name is Alex. I'm a web developer living and working in Toronto. I teach children to code, I'm part of a budding start up and I love music.  
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+I'm always looking to learn new things. As I do I'll try to document what I deem useful in the hopes that someone else may also benefit.  
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+Thanks for visiting and stay in touch.  
+
+-Alex  
