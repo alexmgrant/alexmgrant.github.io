@@ -1,4 +1,4 @@
 alexmgrant.github.io
 ====================
 
-My Blog. (Thanks github pages!)
+http://alexmgrant.github.io
