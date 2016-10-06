@@ -8,9 +8,12 @@ So Ionic rc0 is here. Wooop! RIP Webpack. Wait no Webpack? Nope, we're using [ro
 This comes with a few problems, also known as changes. Let's go over how we can get some [third party libraries](http://ionicframework.com/docs/v2/resources/third-party-libs/) loaded up 
 into our shiny new Ionic project.  
 
-First up here is a blank tabs starter project with everything discussed below: [Ionic rc0 & Firebase](https://github.com/alexmgrant/ionic_rc0_firebase)
+TLDR: Here is a blank tabs starter project with everything discussed below: [Ionic rc0 & Firebase](https://github.com/alexmgrant/ionic_rc0_firebase)  
+`git clone git@github.com:alexmgrant/ionic_rc0_firebase.git`  
+`npm i`  
+`ionic serve`
 
-### Installation  
+### Installation (from scratch) 
 `mkdir your_project_name`  
 `cd your_project_name`    
 `ionic start blank --v2`
@@ -72,7 +75,7 @@ Setup our `/package.json`
     "build:before": "build",
     "run:before": "build"
   },
-  "config": { // here we us config to call our custom rollup.js 
+  "config": { // here we use config to call our custom rollup.js 
     "ionic_rollup": "./config/rollup.config.js"
   },
   "dependencies": {
