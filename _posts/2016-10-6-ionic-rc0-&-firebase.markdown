@@ -10,6 +10,7 @@ into our shiny new Ionic project.
 
 TLDR: Here is a blank tabs starter project with everything discussed below: [Ionic rc0 & Firebase](https://github.com/alexmgrant/ionic_rc0_firebase)  
 `git clone git@github.com:alexmgrant/ionic_rc0_firebase.git`  
+`cd ionic_rc0_firebase`  
 `npm i`  
 `ionic serve`
 
