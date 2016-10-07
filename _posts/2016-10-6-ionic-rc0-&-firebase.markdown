@@ -27,7 +27,7 @@ For this project we're going to install lodash as well as Firebase
 `npm i lodash firebase --save`  
 
 Typescript will want the static types for our newly added libraries   
-`npm install @types/lodash --save`  
+`npm install @types/lodash --save`   
 
 Install your packages  
 `npm i`  
@@ -229,7 +229,7 @@ export class MyApp {
 Start it up  
 `ionic serve`  
 
-So it works, but until Firebase updates this setup is not ideal. You'll get a couple errors in the console.  
+So it works, but until Firebase updates this setup is not ideal. You'll get a couple errors in the console. I'm currently working on a solution to these. They're from Firebase's use of eval which is only parsing json.
 `$ rollup: Use of 'eval' (in /your_path/your_project_name/node_modules/firebase/auth.js) is strongly discouraged, as it poses security risks and may cause issues with minification. See https://github.com/rollup/rollup/wiki/Troubleshooting#avoiding-eval for more details`
 
 Fortunately you can ignore this. When the Firebase team updates I'm sure they will update their use of eval.

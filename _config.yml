@@ -8,6 +8,18 @@ url: "http://alexgrant.xyz" # the base hostname & protocol for your site
 twitter_username: lubybear
 github_username:  alexmgrant
 
+#seo
+author:
+  alexmgrant
+url:
+  alexmgrant.github.io
+description:
+  A place for all things Javascript 
+
 # Build settings
 markdown: kramdown
-# markdown: redcarpet
+
+gems: [
+  'jekyll-github-metadata',
+  'jekyll-seo-tag'
+]
