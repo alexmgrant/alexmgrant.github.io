@@ -4,9 +4,15 @@ title:  "Ionic rc0 & Firebase"
 date:   2016-10-6 12:01:05
 categories: Ionic
 ---
+{{ page.last-modified-date | date: '%B %d, %Y' }}
+Last updated: Oct 10, 2016
+
 So Ionic rc0 is here. Wooop! RIP Webpack. Wait no Webpack? Nope, we're using [rollupjs](http://rollupjs.org/) now. 
 This comes with a few problems, also known as changes. Let's go over how we can get some [third party libraries](http://ionicframework.com/docs/v2/resources/third-party-libs/) loaded up 
-into our shiny new Ionic project.  
+into our shiny new Ionic project. 
+
+Let's make sure we're up to date  
+`npm install -g ionic cordova typescript` 
 
 Requirements aka worked for me:  
 `node -v` = v6.4.0  
@@ -27,7 +33,10 @@ For this project we're going to install lodash as well as Firebase
 `npm i lodash firebase --save`  
 
 Typescript will want the static types for our newly added libraries   
-`npm install @types/lodash --save`   
+`npm install @types/lodash --save`  
+
+We're going to use a rollup plugin called replace later  
+`npm install --save-dev rollup-plugin-replace` 
 
 Install your packages  
 `npm i`  
@@ -62,7 +71,7 @@ Add Firebase types to `/tsconfig.json`
 }
 {% endhighlight %}  
 
-Next we need to tell rollupjs to use our commonjs modules ie. Firebase. So we don't have to [dig into ionic's implementation](https://github.com/driftyco/ionic-app-scripts/) we can use `package.json` to build our own custom rollupjs script.  
+Next we need to tell rollupjs to use our commonjs modules ie. Firebase & Lodash. So we don't have to [dig into ionic's implementation](https://github.com/driftyco/ionic-app-scripts/) we can use `package.json` to build our own custom rollupjs script.  
 
 Setup our `/package.json`  
 {% highlight Json %}
@@ -165,7 +174,8 @@ var rollupConfig = {
     commonjs({
       include: [
         'node_modules/rxjs/**', // firebase depends on rxjs and needs this to avoid build errors
-        'node_modules/firebase/**' // here is firebase
+        'node_modules/firebase/**', // here is firebase
+        'node_modules/lodash/**' // lodash will complain when we try to use default import
       ],
       namedExports: {
         'node_modules/firebase/firebase.js': ['initializeApp', 'auth', 'database']
@@ -179,7 +189,7 @@ var rollupConfig = {
       extensions: ['.js']
     }),
     globals(),
-    json()
+    json() 
   ]
 };
 
