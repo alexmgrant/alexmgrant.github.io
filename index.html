@@ -13,7 +13,19 @@ layout: default
 
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
+        </h2> 
+
+        <ul class="post-tag">
+          {% for tag in post.categories %}
+          <li>
+            <a href="{{ site.url }}/tags#{{ tag }}" class="tag">
+              <span class="term">{{ tag }}</span>
+            </a>
+          </li>
+          {% unless forloop.last %}{% endunless %}
+          {% endfor %}
+        </ul>
+        <p>{{ post.description }}</p>
       </li>
     {% endfor %}
   </ul>

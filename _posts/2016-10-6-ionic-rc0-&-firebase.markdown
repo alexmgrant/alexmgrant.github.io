@@ -2,9 +2,20 @@
 layout: post
 title:  "Ionic rc0 & Firebase"
 date:   2016-10-6 12:01:05
-categories: Ionic
+categories: Ionic Firebase rc0 Lodash
+description: "With the release of rc0 comes a switch to rollupjs and changes to Ionic's build process. Let's take a look at how we can get our third party commonjs libraries up and running."
 ---
-{{ page.last-modified-date | date: '%B %d, %Y' }}
+<ul class="post-tag">
+  {% for tag in page.categories %}
+  <li>
+    <a href="{{ site.url }}/tags#{{ tag }}" class="tag">
+      <span class="term">{{ tag }}</span>
+    </a>
+  </li>
+  {% unless forloop.last %}{% endunless %}
+  {% endfor %}
+</ul>
+
 Last updated: Oct 10, 2016
 
 So Ionic rc0 is here. Wooop! RIP Webpack. Wait no Webpack? Nope, we're using [rollupjs](http://rollupjs.org/) now. 
