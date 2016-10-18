@@ -16,7 +16,7 @@ description: "With the release of rc0 comes a switch to rollupjs and changes to 
   {% endfor %}
 </ul>
 
-Last updated: Oct 10, 2016
+Last updated: Oct 18, 2016
 
 So Ionic rc0 is here. Wooop! RIP Webpack. Wait no Webpack? Nope, we're using [rollupjs](http://rollupjs.org/) now. 
 This comes with a few problems, also known as changes. Let's go over how we can get some [third party libraries](http://ionicframework.com/docs/v2/resources/third-party-libs/) loaded up 
@@ -184,9 +184,7 @@ var rollupConfig = {
     builtins(),
     commonjs({
       include: [
-        'node_modules/rxjs/**', // firebase depends on rxjs and needs this to avoid build errors
-        'node_modules/firebase/**', // here is firebase
-        'node_modules/lodash/**' // lodash will complain when we try to use default import
+        'node_modules/**', // We're going to include all of node_modules here because there will be many commonjs module dependencies within your included packages.  
       ],
       namedExports: {
         'node_modules/firebase/firebase.js': ['initializeApp', 'auth', 'database']
