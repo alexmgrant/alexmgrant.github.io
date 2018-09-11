@@ -21,3 +21,5 @@ gems: [
   'jekyll-github-metadata',
   'jekyll-seo-tag'
 ]
+
+theme: jekyll-theme-minimal
