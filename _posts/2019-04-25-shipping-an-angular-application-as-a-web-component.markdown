@@ -265,7 +265,7 @@ First we change the build config within `angular.json`.
               "outputHashing": "none",
 {% endhighlight %}
 
-Next we create a script to concat our build files into a single file. We this using Node.js. Create a file called `build-angular-elements.js` in the root of our project. 
+Next, we create a Node.js script to concat our build files into a single file so we can quickly ship our application. Create a file called `build-angular-elements.js` in the root of the project. 
 
 {% highlight javascript %}
 // build-angular-elements.js
@@ -301,4 +301,4 @@ Create an npm script to build our angular app and run our concat script.
 Now run our new build script.  
 `npm run build:angular-elements`
 
-Success, we now have our app built as a web component available in the root of our project under the `angular-elements-build` firectory. Include these files into any website and enjoy! 
+Success, we now have our app built as a web component available in the root of our project under the `angular-elements-build` directory. Include these files into any website and enjoy! 
