@@ -25,13 +25,17 @@ description: "Ship your Angular application as a native web component. Even with
   {% endfor %}
 </ul>
 
-Last updated: April 25, 2019
-
 At [Xello](https://xello.world/en/careers/) our host application is written in AngularJs. We have many different teams shipping code to our host application of varying sizes. Today we want to be shipping Angular, not AngularJs, and the following is what has worked best for us when integrating Angular with an AngularJs host. Keep in mind that we could also ship our app to any web page or framework like this.
 
 My local environment  
 `node -v` = v11.6.0  
 `npm -v` = 6.9.0
+
+tldr: Here is the final project on [github](https://github.com/alexmgrant/ship-angular-app-as-web-component).  
+`git clone git@github.com:alexmgrant/ship-angular-app-as-web-component.git`  
+`cd ship-angular-app-as-web-component`  
+`npm i`  
+`ng serve --open`
 
 Installation (from scratch)  
 `npm install -g @angular/cli`  
