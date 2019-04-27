@@ -240,7 +240,7 @@ const routes: Routes = [
 export class AppRoutingModule {}
 {% endhighlight %}
 
-Now we can see everything works with the Angular router within a web component. 🎉
+Now we can see everything works with the Angular router within a web component. 🎉  
 
 Next we optimize our build process for shipping our app.  
 First we change the build config within `angular.json`.
@@ -306,3 +306,8 @@ Now run our new build script.
 `npm run build:angular-elements`
 
 Success, we now have our app built as a web component available in the root of our project under the `angular-elements-build` directory. Include these files into any website and enjoy! 
+
+Here are my resources for this article.  
+[Alain Chautard](https://blog.angulartraining.com/tutorial-how-to-create-custom-angular-elements-55aea29d80c5)  
+[Matija Žolek](https://stackblitz.com/edit/angular-elements-routing)  
+[softwarearchitekt.io](https://www.softwarearchitekt.at/post/2019/01/27/building-angular-elements-with-the-cli.aspx)
